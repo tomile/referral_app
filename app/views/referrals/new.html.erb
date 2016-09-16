@@ -1,1 +1,32 @@
 <h1>New Referral</h1>
+
+<%= form_for :referral, url: referrals_path do |f| %>
+	<p>
+		<%= f.label :sending_agent %>
+		<%= f.text_field :sending_agent%>
+	</p>
+
+	<p>
+		<%= f.label :receiving_agent %>
+		<%= f.text_field :receiving_agent%>
+	</p>
+
+	<p>
+		<%= f.label :prospect %>
+		<%= f.text_field :prospect %>
+	</p>
+
+	<p>
+		<%= f.label :referral_fee %>
+		<%= f.number_field :referral_fee %>
+	</p>
+ 
+  <p>
+    <%= f.label :note %><br>
+    <%= f.text_area :note %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
